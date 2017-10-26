@@ -54,7 +54,7 @@ block content
           input(type="hidden", name="project", value="purchaser,recipient,created,service,amount,gems")
           input(type="hidden", name="limit", value="10")
         .col-sm-1
-          button.form-control.btn.btn-primary(type="submit") Search
+          button.btn.btn-primary(type="submit") Search
 
   if !me.isAdmin()
     div.text-center You must be logged in as an admin to view this page.
@@ -106,8 +106,7 @@ block content
     a.btn.btn-secondary#create-free-sub-btn Create Free Subscription Link
     span.spl.spr
       if view.freeSubLink
-        input.btn.btn-primary#free-sub-input(type="text", readonly, value="#{view.freeSubLink}")
-        input(type="submit")
+        input#free-sub-input(type="text", readonly, value="#{view.freeSubLink}")
 
     .form-inline
       .form-group
